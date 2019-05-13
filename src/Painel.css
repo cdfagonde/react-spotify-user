@@ -25,8 +25,9 @@
   z-index: 1;
 }
 .playlist-image {
-    max-width: 25vmin;
-    width: 300px;
+    /*max-width: 25vmin;*/
+    width: 150px;
+    height: 150px;
     padding: 5px;
 }
 img[alt] {

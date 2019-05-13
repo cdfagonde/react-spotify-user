@@ -4,13 +4,19 @@ import "./Painel.css";
 const Painel = props => {
   // Info do usuario
   // console.log( props.user );
-  const userName  = props.user ? props.user.display_name : "-";
+  const userName  = props.user ? props.user.display_name : "";
   const userImage = props.user && props.user.images ? props.user.images[0].url : "";
+
+  if(props.user){
+    console.log( props.user );
+    //
+  }
   
   if(props.playlists){
     console.log( props.playlists );
     //
   }
+  // <br clear="all"/>
 
   return (
     <div className="">
@@ -18,7 +24,7 @@ const Painel = props => {
         <img className="user-image" src={userImage} alt="" />{" "}
         <h3>{userName}</h3>
       </div>
-      <br clear="all"/>
+      
 
       <div className="playlist-wrapper" >
        { props.playlists &&

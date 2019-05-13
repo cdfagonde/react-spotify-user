@@ -80,11 +80,14 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={spotify_logo} className="App-logo" alt="logo" />
-          <br/>
+
           {!this.state.token && (
+            <p>
+            <br/><br/>
             <a className="btn btn--loginApp-link"
                href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`}
             > Login to Spotify </a>
+            </p>
           )}
           {this.state.token && (
             <Painel user={this.state.user} playlists={this.state.playlists}  />
